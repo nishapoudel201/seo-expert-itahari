@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Geist', 'Manrope', system-ui, -apple-system, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-[#f8fafc] text-slate-900 antialiased selection:bg-emerald-500/15 selection:text-emerald-900 min-h-screen flex flex-col font-sans;
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geist', 'Manrope', system-ui, sans-serif;
+    letter-spacing: -0.03em;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  code, pre, kbd, samp, .font-mono {
+    font-family: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+    font-feature-settings: "tnum" 1, "calt" 0;
+    letter-spacing: -0.015em;
+  }
+
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+
+/* Professional Modern Component Utilities */
+@layer components {
+  .card-indie, .card-surface {
+    @apply bg-white border border-slate-200/80 rounded-2xl shadow-sm transition-all duration-200;
+  }
+  .card-indie:hover, .card-surface:hover {
+    @apply -translate-y-0.5 shadow-md border-slate-300/90;
+  }
+
+  .btn-indie-primary, .btn-primary {
+    @apply px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs tracking-normal shadow-sm hover:shadow transition-all flex items-center gap-2 active:scale-[0.99];
+  }
+
+  .btn-indie-secondary, .btn-secondary {
+    @apply px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs shadow-sm transition-all flex items-center gap-2 active:scale-[0.99];
+  }
+
+  .badge-indie, .badge-subtle {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 bg-white text-xs font-mono font-medium text-slate-700 shadow-sm;
+  }
+
+  .tape-badge, .status-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-semibold rounded-full bg-slate-100 text-slate-800 border border-slate-200/80 shadow-sm;
+  }
+}
+
+/* Subtle Smooth Animations */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background-color: #10b981;
+  vertical-align: middle;
+  animation: cursorBlink 1s infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Clean minimal dark modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090b0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ============================================================ */
+/* JISHNU MONDAL REFERENCE: CINEMATIC NOISE & PRELOADER STYLES */
+/* ============================================================ */
+.noise-overlay {
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  position: fixed;
+  inset: 0;
+}
+
+/* Dust particles floating */
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(8px);
+  }
+}
+
+.dust-particle {
+  animation: floatParticle 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Glow Pill Buttons & Interactive Elements */
+.btn-pill-primary {
+  @apply relative inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:scale-[1.03] active:scale-[0.98];
+}
+
+.btn-pill-secondary {
+  @apply relative inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-white/5 text-white border border-white/20 hover:border-emerald-400/50 hover:text-emerald-400 backdrop-blur-md hover:scale-[1.03] active:scale-[0.98];
+}
+
+/* Glowing Border Card */
+.glow-card {
+  @apply relative rounded-2xl sm:rounded-3xl bg-[#11151c] border border-white/10 transition-all duration-300;
+}
+.glow-card:hover {
+  @apply border-emerald-500/40 shadow-[0_0_30px_rgba(16,185,129,0.15)] -translate-y-1;
+}

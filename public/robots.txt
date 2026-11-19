@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Directives
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://seoexpertitahari.com/sitemap.xml
