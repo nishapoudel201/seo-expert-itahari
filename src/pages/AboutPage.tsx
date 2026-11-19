@@ -37,7 +37,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold bg-pink-50 text-pink-700 border border-pink-200 shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_#f472b6] animate-pulse" />
-              Independent Senior Consultant // Itahari, Nepal
+              Nisha Poudel • Senior SEO Consultant // Itahari, Nepal
             </span>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight font-heading">
               Technical SEO Craftsmanship Without Agency Overhead
@@ -59,11 +59,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
               <div className="rounded-2xl border-2 border-pink-200 bg-white shadow-md overflow-hidden group relative">
                 <img 
                   src="/images/seo-consultant-profile.jpg" 
-                  alt="Portrait of Nepali SEO Consultant in Itahari, Nepal"
+                  alt="Nisha Poudel - Senior SEO Consultant in Itahari, Nepal" 
                   className="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="p-3.5 bg-pink-50/80 border-t border-pink-100 text-xs font-mono text-slate-700 flex items-center justify-between">
-                  <span className="font-semibold text-slate-900">Consultant & Strategist</span>
+                  <span className="font-semibold text-slate-900">Nisha Poudel</span>
                   <span className="text-[10px] px-2 py-0.5 rounded-full bg-white text-pink-700 border border-pink-200 font-bold shadow-2xs">
                     Itahari Ward 4
                   </span>
@@ -81,7 +81,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
                 Why I Work as an Independent SEO Consultant
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                I am an independent SEO practitioner and web strategist located in <strong>Itahari Sub-Metropolitan City (Ward 4), Sunsari District, Koshi Province, Nepal</strong>. After watching numerous businesses in Eastern Nepal pay hefty monthly retainers for automated generic PDF reports that produced zero real customers, I chose a different path.
+                I am Nisha Poudel, an independent SEO practitioner and web strategist located in <strong>Itahari Sub-Metropolitan City (Ward 4), Sunsari District, Koshi Province, Nepal</strong>. After watching numerous businesses in Eastern Nepal pay hefty monthly retainers for automated generic PDF reports that produced zero real customers, I chose a different path.
               </p>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 I work directly with founders, clinic owners, e-commerce retailers, and service providers. When you hire me, you don't talk to an account manager or a junior intern. You talk to the person who writes the code, analyzes your log files, structures your schema markup, and monitors your crawl budgets.

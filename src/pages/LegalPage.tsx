@@ -19,7 +19,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ type, onNavigate }) => {
         },
         {
           h: '2. Purpose of Data Processing',
-          p: 'Your contact details and website address are used exclusively to evaluate your domain\'s organic search performance, prepare diagnostic audit findings, and communicate strategic consultation proposals. We never sell, rent, or lease your personal information to third-party marketing brokers.'
+          p: 'Your contact details and website address are used exclusively by Nisha Poudel to evaluate your domain\'s organic search performance, prepare diagnostic audit findings, and communicate strategic consultation proposals. We never sell, rent, or lease your personal information to third-party marketing brokers.'
         },
         {
           h: '3. Analytics and Cookies',
@@ -27,7 +27,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ type, onNavigate }) => {
         },
         {
           h: '4. Contact and Rights',
-          p: 'If you wish to inspect, correct, or delete any personal information submitted via our forms, contact our data administrator at consult@seoexpertitahari.com (Itahari, Sunsari, Nepal).'
+          p: 'If you wish to inspect, correct, or delete any personal information submitted via our forms, contact Nisha Poudel at consult@seoexpertitahari.com (Itahari Sub-Metropolitan City, Ward 4, Sunsari District, Nepal).'
         }
       ]
     },
@@ -38,7 +38,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ type, onNavigate }) => {
       sections: [
         {
           h: '1. Engagement Scope',
-          p: 'All search engine optimization (SEO) consulting, technical audits, topical mapping, and on-page optimization services are provided under formal statements of work (SOW) agreed between the client and SEO Expert Itahari.'
+          p: 'All search engine optimization (SEO) consulting, technical audits, topical mapping, and on-page optimization services are provided under formal statements of work (SOW) agreed between the client and Nisha Poudel (SEO Expert Itahari).'
         },
         {
           h: '2. Professional White-Hat Standards',
@@ -61,7 +61,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ type, onNavigate }) => {
       sections: [
         {
           h: '1. No Unconditional Ranking Guarantees',
-          p: 'Google Search operates using dynamic, constantly updated ranking algorithms. We guarantee transparent, best-practice execution, senior-level attention to detail, and data-driven optimization. However, we explicitly disclaim any guarantee that any specific web page will achieve or retain a permanent rank on Google.'
+          p: 'Google Search operates using dynamic, constantly updated ranking algorithms. We guarantee transparent, best-practice execution, senior-level attention to detail by Nisha Poudel, and data-driven optimization. However, we explicitly disclaim any guarantee that any specific web page will achieve or retain a permanent rank on Google.'
         },
         {
           h: '2. Financial & Business Outcomes',
@@ -76,27 +76,28 @@ export const LegalPage: React.FC<LegalPageProps> = ({ type, onNavigate }) => {
   }[type];
 
   return (
-    <div className="flex flex-col w-full bg-[#f8fafc] min-h-screen text-slate-900">
-      <div className="bg-white border-b border-slate-200/80">
+    <div className="flex flex-col w-full bg-[#fffafc] min-h-screen text-slate-900 selection:bg-pink-200 selection:text-pink-900">
+      <div className="bg-[#fff0f4] border-b border-pink-100">
         <Breadcrumbs items={[{ label: content.breadcrumb }]} onNavigate={onNavigate} />
       </div>
 
-      <header className="bg-white border-b border-slate-200 py-12 sm:py-16">
+      <header className="bg-gradient-to-b from-[#fff5f8] to-white border-b border-pink-100 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60 mb-2">
-            Legal & Regulatory Transparency
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-pink-50 text-pink-700 border border-pink-200 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-pink-500 animate-pulse" />
+            Legal & Regulatory Transparency // Nisha Poudel
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 font-heading">
             {content.title}
           </h1>
           <p className="text-xs text-slate-500 mt-2 font-mono">
-            Location: Itahari Sub-Metropolitan City, Sunsari District, Koshi Province, Nepal • {content.date}
+            Location: Itahari Sub-Metropolitan City (Ward 4), Sunsari District, Koshi Province, Nepal • {content.date}
           </p>
         </div>
       </header>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
-        <div className="bg-white p-6 sm:p-9 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div className="bg-white p-6 sm:p-9 rounded-3xl border border-pink-150 shadow-[0_4px_25px_rgba(244,114,182,0.06)] space-y-6">
           {content.sections.map((s, idx) => (
             <section key={idx} className="space-y-2">
               <h2 className="text-base sm:text-lg font-bold text-slate-900 font-heading">

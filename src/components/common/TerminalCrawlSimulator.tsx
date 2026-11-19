@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Terminal, Play, CheckCircle2, RefreshCw, Cpu } from 'lucide-react';
+import { Terminal, Cpu } from 'lucide-react';
 
 export const TerminalCrawlSimulator: React.FC = () => {
   const [targetQuery, setTargetQuery] = useState('dental clinic near itahari chowk');
@@ -53,11 +53,11 @@ export const TerminalCrawlSimulator: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-7 text-slate-900">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+    <div className="bg-white rounded-3xl border border-pink-150 shadow-[0_4px_25px_rgba(244,114,182,0.06)] p-6 sm:p-7 text-slate-900">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-pink-100">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-mono font-bold text-xs shadow-xs">
-            <Terminal className="w-4 h-4 text-emerald-400" />
+          <div className="w-8 h-8 rounded-xl bg-pink-500 text-white flex items-center justify-center font-mono font-bold text-xs shadow-xs">
+            <Terminal className="w-4 h-4 text-white" />
           </div>
           <div>
             <h3 className="font-bold text-sm tracking-tight text-slate-900 font-heading">
@@ -77,7 +77,7 @@ export const TerminalCrawlSimulator: React.FC = () => {
               key={idx}
               onClick={() => runSimulation(q)}
               disabled={isRunning}
-              className="px-2.5 py-1 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-medium transition-colors disabled:opacity-50"
+              className="px-3 py-1 rounded-full border border-pink-200 bg-[#fffafc] hover:bg-pink-50 text-slate-700 text-xs font-medium transition-colors disabled:opacity-50"
             >
               "{q.split(' ')[0]} {q.split(' ')[1]}..."
             </button>
@@ -86,28 +86,28 @@ export const TerminalCrawlSimulator: React.FC = () => {
       </div>
 
       {/* Terminal Viewport */}
-      <div className="mt-4 p-4 rounded-xl bg-slate-950 text-slate-200 font-mono text-xs leading-relaxed overflow-x-auto min-h-[175px] border border-slate-800 shadow-inner space-y-1">
+      <div className="mt-4 p-4 rounded-2xl bg-slate-950 text-slate-200 font-mono text-xs leading-relaxed overflow-x-auto min-h-[175px] border border-pink-950/60 shadow-inner space-y-1">
         <div className="text-[11px] text-slate-500 pb-2 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-700 inline-block" />
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-700 inline-block" />
+            <span className="w-2.5 h-2.5 rounded-full bg-pink-400 inline-block" />
+            <span className="w-2.5 h-2.5 rounded-full bg-pink-300 inline-block" />
             <span className="w-2.5 h-2.5 rounded-full bg-slate-700 inline-block" />
             <span className="ml-1 text-slate-400">googlebot-crawler // terminal</span>
           </div>
-          <span className="text-emerald-400">Googlebot Mobile User-Agent</span>
+          <span className="text-pink-400">Googlebot Mobile User-Agent</span>
         </div>
         
         <div className="pt-2 space-y-1">
           {logs.map((log, index) => (
             <div key={index} className="flex items-start gap-2">
-              <span className="text-emerald-500 select-none font-bold">&gt;</span>
-              <span className={log.startsWith('✓') ? 'text-emerald-400 font-bold' : log.startsWith('$') ? 'text-amber-300 font-bold' : 'text-slate-300'}>
+              <span className="text-pink-400 select-none font-bold">&gt;</span>
+              <span className={log.startsWith('✓') ? 'text-pink-300 font-bold' : log.startsWith('$') ? 'text-rose-300 font-bold' : 'text-slate-300'}>
                 {log}
               </span>
             </div>
           ))}
           {isRunning && (
-            <div className="flex items-center gap-2 text-emerald-400">
+            <div className="flex items-center gap-2 text-pink-400">
               <Cpu className="w-3.5 h-3.5 animate-spin" />
               <span>Analyzing DOM elements & schema graphs...</span>
             </div>

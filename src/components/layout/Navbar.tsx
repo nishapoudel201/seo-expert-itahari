@@ -102,13 +102,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div>
               <div className="font-bold text-base text-slate-900 tracking-tight flex items-center gap-2 font-heading">
-                <span>SEO Expert Itahari</span>
+                <span>Nisha Poudel</span>
                 <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-pink-50 text-pink-700 border border-pink-200 font-semibold shadow-xs">
-                  Active
+                  SEO Expert
                 </span>
               </div>
               <p className="text-[11px] font-mono text-slate-500">
-                Sunsari, Nepal • Organic Search Architecture
+                Itahari, Sunsari • Technical Search Strategist
               </p>
             </div>
           </a>

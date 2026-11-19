@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div>
                 <span className="font-bold text-base text-slate-900 tracking-tight block font-heading">
-                  SEO Expert Itahari
+                  Nisha Poudel — SEO Expert Itahari
                 </span>
                 <span className="block text-xs font-mono text-pink-600 font-semibold">
                   Itahari, Sunsari, Koshi Province, Nepal

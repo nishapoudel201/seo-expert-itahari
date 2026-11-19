@@ -93,7 +93,7 @@ export function App() {
 
   // 1. Homepage
   if (currentPath === '/' || currentPath === '/home') {
-    document.title = 'SEO Expert in Itahari, Nepal | Sustainable Organic Growth & Semantic SEO Services';
+    document.title = 'Nisha Poudel - SEO Expert in Itahari, Nepal | Semantic Search Architecture';
     currentSchema = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -101,13 +101,17 @@ export function App() {
           '@type': 'WebSite',
           '@id': 'https://seoexpertitahari.com/#website',
           'url': 'https://seoexpertitahari.com',
-          'name': 'SEO Expert in Itahari, Nepal',
-          'description': 'Professional SEO consultancy based in Itahari, Sunsari, Koshi Province, Nepal.'
+          'name': 'Nisha Poudel - SEO Expert in Itahari, Nepal',
+          'description': 'Professional SEO consultancy led by Nisha Poudel, based in Itahari, Sunsari, Koshi Province, Nepal.'
         },
         {
           '@type': 'ProfessionalService',
           '@id': 'https://seoexpertitahari.com/#localbusiness',
-          'name': 'SEO Expert in Itahari',
+          'name': 'SEO Expert in Itahari - Nisha Poudel',
+          'founder': {
+            '@type': 'Person',
+            'name': 'Nisha Poudel'
+          },
           'url': 'https://seoexpertitahari.com',
           'telephone': '+977-980-0000000',
           'priceRange': '$$',
@@ -135,8 +139,18 @@ export function App() {
         {
           '@type': 'Person',
           '@id': 'https://seoexpertitahari.com/#person',
-          'name': 'SEO Expert Itahari',
-          'jobTitle': 'Senior SEO & Semantic Search Strategist',
+          'name': 'Nisha Poudel',
+          'givenName': 'Nisha',
+          'familyName': 'Poudel',
+          'jobTitle': 'Senior SEO Specialist & Technical Search Strategist',
+          'description': 'Independent SEO Expert based in Itahari, Sunsari, Nepal specializing in semantic topical authority, Core Web Vitals, and local Google 3-Pack optimization.',
+          'image': 'https://seoexpertitahari.com/images/seo-consultant-profile.jpg',
+          'address': {
+            '@type': 'PostalAddress',
+            'addressLocality': 'Itahari',
+            'addressRegion': 'Sunsari, Koshi Province',
+            'addressCountry': 'Nepal'
+          },
           'worksFor': {
             '@id': 'https://seoexpertitahari.com/#localbusiness'
           }
@@ -223,7 +237,8 @@ export function App() {
         'datePublished': post.publishedDate,
         'author': {
           '@type': 'Person',
-          'name': 'SEO Expert Itahari'
+          'name': 'Nisha Poudel',
+          'jobTitle': 'Senior SEO Specialist & Technical Search Strategist'
         }
       };
       pageContent = (
@@ -240,11 +255,11 @@ export function App() {
   }
   // 5. Trust Pages
   else if (currentPath === '/about') {
-    document.title = 'About Me & Philosophy | SEO Expert in Itahari, Nepal';
+    document.title = 'About Nisha Poudel | SEO Expert in Itahari, Nepal';
     currentSchema = {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      'name': 'About SEO Expert Itahari',
+      'name': 'About Nisha Poudel - SEO Expert Itahari',
       'description': 'Senior SEO and Semantic Search Strategist based in Itahari, Sunsari, Nepal.'
     };
     pageContent = (
@@ -254,11 +269,11 @@ export function App() {
       />
     );
   } else if (currentPath === '/contact') {
-    document.title = 'Contact & Consultation | SEO Expert in Itahari, Nepal';
+    document.title = 'Contact Nisha Poudel | SEO Expert in Itahari, Nepal';
     currentSchema = {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      'name': 'Contact SEO Expert Itahari',
+      'name': 'Contact Nisha Poudel - SEO Expert Itahari',
       'telephone': '+977-980-0000000',
       'email': 'consult@seoexpertitahari.com'
     };

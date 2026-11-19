@@ -74,8 +74,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
         {/* Brand & Location Label */}
         <div className="space-y-1.5 transition-opacity duration-500">
-          <div className="font-heading text-sm sm:text-base md:text-lg font-bold tracking-[0.3em] uppercase text-slate-900">
-            SEO Expert in Itahari
+          <div className="font-heading text-sm sm:text-base md:text-lg font-bold tracking-[0.25em] uppercase text-slate-900">
+            Nisha Poudel • SEO Expert in Itahari
           </div>
           <p className="font-mono text-xs sm:text-xs text-pink-600 tracking-[0.25em] uppercase font-semibold">
             Sunsari • Koshi Province • Nepal

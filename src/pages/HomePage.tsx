@@ -92,12 +92,12 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-pink-200 bg-white/90 shadow-sm backdrop-blur-md">
                 <img 
                   src="/images/seo-consultant-profile.jpg" 
-                  alt="Nisha Poudel - Senior SEO Consultant" 
+                  alt="Nisha Poudel - Senior SEO Consultant in Itahari, Nepal" 
                   className="w-5 h-5 rounded-full object-cover object-top ring-1.5 ring-pink-400 shadow-[0_0_8px_rgba(244,114,182,0.5)]"
                 />
                 <span className="w-1.5 h-1.5 rounded-full bg-pink-500 shadow-[0_0_8px_#f472b6] animate-pulse" />
                 <span className="text-pink-700 text-[11px] font-mono font-bold tracking-[0.2em] uppercase">
-                  TECHNICAL SEARCH STRATEGIST • SUNSARI, KOSHI PROVINCE
+                  NISHA POUDEL • TECHNICAL SEARCH STRATEGIST • SUNSARI, NEPAL
                 </span>
               </div>
 
@@ -260,14 +260,14 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="relative rounded-3xl border-2 border-pink-200/90 bg-white shadow-xl overflow-hidden group">
                 <img 
                   src="/images/seo-consultant-profile.jpg" 
-                  alt="Portrait of Nepali SEO Consultant in Itahari, Nepal"
+                  alt="Nisha Poudel - Senior SEO Expert and Technical Search Strategist in Itahari, Nepal"
                   className="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 
                 <div className="p-4 bg-white border-t border-pink-100 font-sans text-xs space-y-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 font-bold font-heading">Senior SEO Strategist & Web Architect</strong>
+                    <strong className="text-slate-900 font-bold font-heading">Nisha Poudel — Senior SEO Strategist</strong>
                     <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-pink-50 text-pink-700 border border-pink-200 font-semibold font-mono">
                       DIRECT ADVISORY
                     </span>
@@ -282,19 +282,19 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Right Column: Local Reality Story */}
             <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-pink-50 text-pink-700 border border-pink-200">
-                PRACTICE PROFILE • ITAHARI, SUNSARI
+                PRACTICE PROFILE • NISHA POUDEL (ITAHARI, SUNSARI)
               </span>
 
               <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight font-heading">
-                Operating from Eastern Nepal’s Premier Commercial Crossroads.
+                Meet Nisha Poudel – Engineering Organic Search Growth from Eastern Nepal.
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-normal">
-                Itahari sits directly at the strategic junction where the East-West Mahendra Highway meets the Dharan-Biratnagar corridor. Every day, thousands of local consumers, regional enterprises, and travelers query Google on mobile devices for medical clinics, wholesale industrial suppliers, boutique hotels, engineering services, and educational institutions.
+                I am Nisha Poudel, an independent SEO practitioner and technical search strategist located in <strong>Itahari Sub-Metropolitan City (Ward 4), Sunsari District, Koshi Province, Nepal</strong>. Itahari sits directly at the strategic junction where the East-West Mahendra Highway meets the Dharan-Biratnagar corridor. Every day, thousands of local consumers, regional enterprises, and travelers query Google on mobile devices for medical clinics, wholesale industrial suppliers, boutique hotels, engineering services, and educational institutions.
               </p>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-normal">
-                When prospective customers search for local services in Sunsari and Eastern Nepal, Google presents the Local 3-Pack map block first. If your Google Business Profile has conflicting citations or your website experiences rendering delays, nearby competitors capture that revenue. We systematically architect your digital assets to dominate local intent.
+                When prospective customers search for local services in Sunsari and Eastern Nepal, Google presents the Local 3-Pack map block first. If your Google Business Profile has conflicting citations or your website experiences rendering delays, nearby competitors capture that revenue. I systematically architect your digital assets and semantic topical maps to dominate organic and local search intent.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-2 text-xs font-mono">

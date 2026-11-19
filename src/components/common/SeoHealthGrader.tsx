@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { 
-  Gauge, 
   Search, 
   CheckCircle2, 
   AlertTriangle, 
   XCircle, 
   ArrowRight, 
   Terminal,
-  Activity,
   Cpu
 } from 'lucide-react';
 
@@ -65,18 +63,18 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
   };
 
   return (
-    <div className="my-10 rounded-2xl bg-white border border-slate-200 shadow-sm p-6 sm:p-9 text-slate-900">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+    <div className="my-10 rounded-3xl bg-white border border-pink-150 shadow-[0_4px_25px_rgba(244,114,182,0.06)] p-6 sm:p-9 text-slate-900">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-pink-100">
         <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-slate-100 text-slate-800 border border-slate-200 mb-2">
-            <Terminal className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-pink-50 text-pink-700 border border-pink-200 mb-2">
+            <Terminal className="w-3.5 h-3.5 text-pink-500" />
             <span>Diagnostic Tool • Domain Health Grader</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 font-heading">
             Technical SEO & Semantic Health Inspector
           </h3>
           <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-2xl font-sans">
-            Audit your website for Googlebot crawling readiness, schema integration, and local visibility signals across Sunsari & Nepal.
+            Audit your website for Googlebot crawling readiness, schema integration, and local visibility signals across Sunsari & Nepal with Nisha Poudel.
           </p>
         </div>
       </div>
@@ -92,7 +90,7 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="https://yourwebsite.com"
-            className="w-full text-xs p-3 rounded-xl border border-slate-300 bg-white font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-xs"
+            className="w-full text-xs p-3 rounded-2xl border border-pink-200 bg-[#fffafc] font-mono focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-500 shadow-2xs"
           />
         </div>
 
@@ -105,7 +103,7 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
             value={targetKeyword}
             onChange={(e) => setTargetKeyword(e.target.value)}
             placeholder="e.g. hotel in Itahari"
-            className="w-full text-xs p-3 rounded-xl border border-slate-300 bg-white font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-xs"
+            className="w-full text-xs p-3 rounded-2xl border border-pink-200 bg-[#fffafc] font-mono focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-500 shadow-2xs"
           />
         </div>
 
@@ -113,16 +111,16 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
           <button
             type="submit"
             disabled={isScanning}
-            className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs shadow-sm hover:shadow transition-all flex items-center justify-center gap-1.5 disabled:opacity-50"
+            className="w-full btn-pill-primary py-3 px-4 justify-center text-xs disabled:opacity-50"
           >
             {isScanning ? (
               <>
-                <Cpu className="w-4 h-4 animate-spin text-emerald-400" />
+                <Cpu className="w-4 h-4 animate-spin text-white" />
                 <span>Auditing...</span>
               </>
             ) : (
               <>
-                <Search className="w-4 h-4 text-slate-300" />
+                <Search className="w-4 h-4 text-white" />
                 <span>Run Diagnostic</span>
               </>
             )}
@@ -132,9 +130,9 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
 
       {/* Scanning Terminal Animation */}
       {isScanning && (
-        <div className="mt-5 p-4 rounded-xl bg-slate-950 text-emerald-400 font-mono text-xs border border-slate-800 space-y-2">
-          <div className="flex items-center gap-2 border-b border-slate-800 pb-2 text-[11px] text-slate-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block animate-pulse"></span>
+        <div className="mt-5 p-4 rounded-2xl bg-slate-950 text-pink-300 font-mono text-xs border border-pink-900/50 space-y-2">
+          <div className="flex items-center gap-2 border-b border-slate-800 pb-2 text-[11px] text-pink-200/70">
+            <span className="w-2.5 h-2.5 rounded-full bg-pink-400 inline-block animate-pulse"></span>
             <span>DIAGNOSTIC PROCESSOR // STEP {scanStep + 1} OF 5</span>
           </div>
           <p className="text-white">
@@ -142,7 +140,7 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
           </p>
           <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-2">
             <div 
-              className="bg-emerald-500 h-full transition-all duration-300"
+              className="bg-gradient-to-r from-pink-400 to-rose-400 h-full transition-all duration-300"
               style={{ width: `${((scanStep + 1) / 5) * 100}%` }}
             ></div>
           </div>
@@ -151,13 +149,13 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
 
       {/* Result Display */}
       {result && (
-        <div className="mt-6 pt-6 border-t border-slate-100 animate-in fade-in duration-300 font-sans">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-xl bg-slate-50 border border-slate-200 mb-5">
+        <div className="mt-6 pt-6 border-t border-pink-100 animate-in fade-in duration-300 font-sans">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-2xl bg-[#fff5f8] border border-pink-200 mb-5">
             <div>
               <span className="text-xs font-mono font-semibold text-slate-500 uppercase">Calculated Domain Health Score</span>
               <div className="flex items-baseline gap-2.5 mt-1">
                 <span className="text-4xl font-extrabold font-mono text-slate-900">{result.score}/100</span>
-                <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full bg-amber-100 border border-amber-300 text-amber-800">
+                <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full bg-pink-100 border border-pink-300 text-pink-800">
                   Optimization Recommended
                 </span>
               </div>
@@ -171,16 +169,16 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
             {result.metrics.map((metric, i) => (
               <div
                 key={i}
-                className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs"
+                className="p-4 rounded-2xl bg-white border border-pink-150 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    {metric.status === 'good' && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
+                    {metric.status === 'good' && <CheckCircle2 className="w-4 h-4 text-pink-500 shrink-0" />}
                     {metric.status === 'warning' && <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />}
                     {metric.status === 'critical' && <XCircle className="w-4 h-4 text-rose-500 shrink-0" />}
                     <span className="font-bold text-slate-900 font-heading">{metric.name}</span>
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-semibold ${
-                      metric.status === 'good' ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' :
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold ${
+                      metric.status === 'good' ? 'bg-pink-50 text-pink-700 border border-pink-200' :
                       metric.status === 'warning' ? 'bg-amber-50 text-amber-800 border border-amber-200' : 'bg-rose-50 text-rose-800 border border-rose-200'
                     }`}>
                       {metric.score}/100
@@ -192,13 +190,13 @@ export const SeoHealthGrader: React.FC<SeoHealthGraderProps> = ({ onOpenConsulta
             ))}
           </div>
 
-          <div className="mt-6 p-4 rounded-xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-xs text-slate-300 font-sans">
-              Would you like a manual code-level audit detailing exact line-by-line fixes?
+          <div className="mt-6 p-6 rounded-3xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+            <span className="text-xs text-pink-100 font-sans">
+              Would you like a manual code-level audit detailing exact line-by-line fixes from Nisha Poudel?
             </span>
             <button
               onClick={onOpenConsultation}
-              className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-sm transition-all flex items-center gap-1.5 shrink-0"
+              className="py-2.5 px-5 rounded-full bg-white text-pink-700 hover:bg-pink-50 font-bold text-xs shadow-md transition-all flex items-center gap-1.5 shrink-0"
             >
               <span>Request In-Depth Manual Audit</span>
               <ArrowRight className="w-3.5 h-3.5" />

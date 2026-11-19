@@ -127,8 +127,8 @@ export const VideoAuditAnimation: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className={`rounded-2xl border border-slate-800 bg-slate-950 text-white shadow-2xl overflow-hidden transition-all duration-300 relative ${
-        isFullscreen ? 'fixed inset-4 z-50 rounded-2xl max-h-[95vh] flex flex-col justify-between' : 'my-8'
+      className={`rounded-3xl border-2 border-pink-200/90 bg-slate-950 text-white shadow-[0_12px_40px_rgba(244,114,182,0.18)] overflow-hidden transition-all duration-300 relative ${
+        isFullscreen ? 'fixed inset-4 z-50 rounded-3xl max-h-[95vh] flex flex-col justify-between' : 'my-8'
       }`}
     >
       {/* ======================================================== */}
@@ -499,7 +499,7 @@ export const VideoAuditAnimation: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow-xs flex items-center gap-1.5 text-xs"
+              className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 hover:from-pink-600 hover:to-rose-500 text-white font-semibold transition-all shadow-xs flex items-center gap-1.5 text-xs cursor-pointer"
               title={isPlaying ? 'Pause Walkthrough' : 'Play Walkthrough'}
             >
               {isPlaying ? (

@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        pink: {
+          150: '#fce7f3',
+        },
         brand: {
           50: '#ecfdf5',
           100: '#d1fae5',
@@ -104,6 +107,7 @@ export default {
         mono: ['"Geist Mono"', '"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
+        '2xs': '0 1px 2px 0 rgba(15, 23, 42, 0.03)',
         'xs': '0 1px 2px 0 rgba(15, 23, 42, 0.05)',
         'indie': '0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04)',
         'indie-lg': '0 10px 15px -3px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.03)',

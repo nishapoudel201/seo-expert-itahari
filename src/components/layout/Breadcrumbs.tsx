@@ -46,7 +46,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) =
               {index > 0 && <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />}
 
               {isLast ? (
-                <span className="font-semibold text-slate-800 truncate max-w-xs sm:max-w-md bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200" aria-current="page">
+                <span className="font-semibold text-pink-700 truncate max-w-xs sm:max-w-md bg-pink-50 px-2.5 py-0.5 rounded-full border border-pink-200" aria-current="page">
                   {item.label}
                 </span>
               ) : item.path ? (
@@ -56,9 +56,9 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) =
                     e.preventDefault();
                     onNavigate(item.path!);
                   }}
-                  className="hover:text-emerald-700 transition-colors flex items-center gap-1 font-medium"
+                  className="hover:text-pink-600 transition-colors flex items-center gap-1 font-medium text-slate-500"
                 >
-                  {index === 0 && <Home className="w-3.5 h-3.5" />}
+                  {index === 0 && <Home className="w-3.5 h-3.5 text-pink-400" />}
                   <span>{item.label}</span>
                 </a>
               ) : (
