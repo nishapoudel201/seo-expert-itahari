@@ -93,8 +93,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={(e) => handleLinkClick('/', e)}
             className="flex items-center gap-3 group text-left cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 text-white flex items-center justify-center font-mono font-bold text-sm shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
-              SE
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden ring-1.5 ring-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform bg-[#11151c]">
+              <img 
+                src="/images/seo-consultant-profile.jpg" 
+                alt="SEO Expert Itahari" 
+                className="w-full h-full object-cover object-top" 
+              />
             </div>
             <div>
               <div className="font-bold text-base text-white tracking-tight flex items-center gap-2 font-heading">

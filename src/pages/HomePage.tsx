@@ -86,9 +86,14 @@ export const HomePage: React.FC<HomePageProps> = ({
             
             {/* Left Column: Value Prop & Kinetic Typography */}
             <div className="lg:col-span-7 space-y-6">
-              {/* Luminous Status Badge */}
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse" />
+              {/* Luminous Status Badge with Profile Avatar */}
+              <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 backdrop-blur-md">
+                <img 
+                  src="/images/seo-consultant-profile.jpg" 
+                  alt="Nisha Poudel - Senior SEO Consultant" 
+                  className="w-5 h-5 rounded-full object-cover object-top ring-1.5 ring-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.5)]"
+                />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse" />
                 <span className="text-emerald-400 text-[11px] font-mono font-semibold tracking-[0.2em] uppercase">
                   TECHNICAL SEARCH STRATEGIST • SUNSARI, KOSHI PROVINCE
                 </span>
