@@ -9,7 +9,7 @@ interface SpotlightCardProps {
 export const SpotlightCard: React.FC<SpotlightCardProps> = ({
   children,
   className = '',
-  spotlightColor = 'rgba(16, 185, 129, 0.14)',
+  spotlightColor = 'rgba(244, 114, 182, 0.18)',
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -33,9 +33,9 @@ export const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-[#11151c] transition-all duration-300 hover:border-emerald-500/40 hover:-translate-y-1 ${className}`}
+      className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border border-pink-150 bg-white shadow-[0_4px_20px_-2px_rgba(244,114,182,0.08)] transition-all duration-300 hover:border-pink-300 hover:shadow-[0_8px_30px_rgba(244,114,182,0.18)] hover:-translate-y-1 ${className}`}
     >
-      {/* Dynamic Cursor Spotlight Beam */}
+      {/* Dynamic Cursor Spotlight Beam in Baby Pink */}
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 z-10"
         style={{

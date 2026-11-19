@@ -322,7 +322,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090b0e] text-slate-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-300 relative">
+    <div className="min-h-screen flex flex-col bg-[#fffafc] text-slate-900 font-sans selection:bg-pink-200 selection:text-pink-900 relative">
       {/* Cinematic Film Grain Noise Overlay (Jishnu Mondal Reference) */}
       <NoiseOverlay />
 

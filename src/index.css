@@ -86,7 +86,7 @@
   display: inline-block;
   width: 7px;
   height: 14px;
-  background-color: #10b981;
+  background-color: #f472b6;
   vertical-align: middle;
   animation: cursorBlink 1s infinite;
 }
@@ -99,29 +99,29 @@
   animation: pulseGlow 3s ease-in-out infinite;
 }
 
-/* Clean minimal dark modern scrollbar */
+/* Clean minimal baby pink luxury scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090b0e;
+  background: #fff5f8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #fbcfe8;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #f472b6;
 }
 
 /* ============================================================ */
-/* JISHNU MONDAL REFERENCE: CINEMATIC NOISE & PRELOADER STYLES */
+/* WHITE & BABY PINK LUXURY CREATIVE THEME STYLES */
 /* ============================================================ */
 .noise-overlay {
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -144,19 +144,19 @@
   pointer-events: none;
 }
 
-/* Glow Pill Buttons & Interactive Elements */
+/* Baby Pink Glow Pill Buttons & Interactive Elements */
 .btn-pill-primary {
-  @apply relative inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:scale-[1.03] active:scale-[0.98];
+  @apply relative inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-gradient-to-r from-pink-400 via-pink-500 to-rose-400 text-white font-semibold shadow-[0_0_25px_rgba(244,114,182,0.45)] hover:shadow-[0_0_35px_rgba(244,114,182,0.6)] hover:scale-[1.03] active:scale-[0.98];
 }
 
 .btn-pill-secondary {
-  @apply relative inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-white/5 text-white border border-white/20 hover:border-emerald-400/50 hover:text-emerald-400 backdrop-blur-md hover:scale-[1.03] active:scale-[0.98];
+  @apply relative inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-white text-slate-800 border border-pink-200 hover:border-pink-400 hover:text-pink-600 shadow-sm hover:shadow-[0_0_20px_rgba(244,114,182,0.25)] hover:scale-[1.03] active:scale-[0.98];
 }
 
-/* Glowing Border Card */
+/* Glowing Border Card in White and Baby Pink */
 .glow-card {
-  @apply relative rounded-2xl sm:rounded-3xl bg-[#11151c] border border-white/10 transition-all duration-300;
+  @apply relative rounded-2xl sm:rounded-3xl bg-white border border-pink-100 shadow-[0_4px_20px_-2px_rgba(244,114,182,0.08)] transition-all duration-300;
 }
 .glow-card:hover {
-  @apply border-emerald-500/40 shadow-[0_0_30px_rgba(16,185,129,0.15)] -translate-y-1;
+  @apply border-pink-300 shadow-[0_8px_30px_rgba(244,114,182,0.2)] -translate-y-1;
 }
