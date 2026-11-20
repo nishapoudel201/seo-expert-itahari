@@ -68,11 +68,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <span className="text-pink-200">|</span>
             <a 
-              href="tel:+9779800000000" 
+              href="tel:+9779804354377" 
               className="text-slate-600 hover:text-pink-600 transition-colors font-mono flex items-center gap-1"
             >
               <Phone className="w-3 h-3 text-pink-500" />
-              <span>+977 980-0000000</span>
+              <span>+977 9804354377</span>
             </a>
           </div>
         </div>

@@ -38,7 +38,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
   const handleWhatsApp = () => {
     const text = `Namaste Nisha! My name is ${formData.name || 'a visitor'}. Website: ${formData.website || 'N/A'}. Interested in: ${formData.serviceSlug}. Note: ${formData.message || 'Consultation inquiry'}`;
-    window.open(`https://wa.me/9779800000000?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/9779804354377?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -135,7 +135,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+977 9800000000"
+                      placeholder="+977 9804354377"
                       className="w-full p-2.5 rounded-xl border border-pink-200 bg-white text-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-500 shadow-xs"
                     />
                   </div>
@@ -228,7 +228,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     Email: <a href="mailto:consult@seoexpertitahari.com" className="text-pink-600 hover:underline">consult@seoexpertitahari.com</a>
                   </p>
                   <p className="text-slate-700 font-medium">
-                    Phone: <a href="tel:+9779800000000" className="text-pink-600 hover:underline">+977 980-0000000</a>
+                    Phone: <a href="tel:+9779804354377" className="text-pink-600 hover:underline">+977 9804354377</a>
                   </p>
                 </div>
 
@@ -245,7 +245,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   className="w-full btn-pill-primary justify-center text-xs"
                 >
                   <MessageCircle className="w-4 h-4 text-white" />
-                  <span>Start WhatsApp Chat (+977 980-0000000)</span>
+                  <span>Start WhatsApp Chat (+977 9804354377)</span>
                 </button>
               </div>
             </div>

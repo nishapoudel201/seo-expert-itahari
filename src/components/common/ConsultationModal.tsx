@@ -40,7 +40,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
   const handleWhatsAppDirect = () => {
     const text = `Namaste Nisha! My name is ${formData.name || 'a visitor'}. Website: ${formData.website || 'N/A'}. Interested in: ${formData.serviceSlug}. Note: ${formData.message || 'Consultation inquiry'}`;
-    window.open(`https://wa.me/9779800000000?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/9779804354377?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -141,7 +141,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+977 98XXXXXXXX"
+                    placeholder="+977 9804354377"
                     className="w-full p-2.5 rounded-xl border border-pink-200 bg-white text-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-pink-500 shadow-xs"
                   />
                 </div>

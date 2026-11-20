@@ -174,7 +174,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <a
-                  href="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20connect%20regarding%20SEO."
+                  href="https://wa.me/9779804354377?text=Namaste!%20I'd%20like%20to%20connect%20regarding%20SEO."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill-secondary text-xs"

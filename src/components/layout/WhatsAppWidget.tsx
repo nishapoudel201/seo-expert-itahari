@@ -8,7 +8,7 @@ export const WhatsAppWidget: React.FC = () => {
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/9779800000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/9779804354377?text=${encoded}`, '_blank');
     setIsOpen(false);
   };
 
@@ -65,7 +65,7 @@ export const WhatsAppWidget: React.FC = () => {
                 className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-sm hover:shadow transition-all flex items-center justify-center gap-2"
               >
                 <Send className="w-3.5 h-3.5" />
-                <span>Start Direct Chat (+977 980-0000000)</span>
+                <span>Start Direct Chat (+977 9804354377)</span>
               </button>
             </form>
           </div>

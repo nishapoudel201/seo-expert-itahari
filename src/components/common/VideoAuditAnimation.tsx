@@ -262,7 +262,7 @@ export const VideoAuditAnimation: React.FC = () => {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Itahari Premier Healthcare & Wellness",
-  "telephone": "+977 980-0000000",
+  "telephone": "+977 9804354377",
   "address": {
     "streetAddress": "Main Chowk, Ward 4",
     "addressLocality": "Itahari",

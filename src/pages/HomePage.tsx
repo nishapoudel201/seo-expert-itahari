@@ -111,11 +111,11 @@ export const HomePage: React.FC<HomePageProps> = ({
 
             <div className="flex items-center gap-4">
               <a
-                href="tel:+9779800000000"
+                href="tel:+9779804354377"
                 className="inline-flex items-center gap-1.5 text-slate-700 hover:text-pink-600 font-semibold transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-pink-500" />
-                <span>+977 980-0000000</span>
+                <span>+977 9804354377</span>
               </a>
               <button
                 onClick={onOpenSchema}
@@ -186,13 +186,13 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <a
-                  href="https://wa.me/9779800000000?text=Namaste%20Nisha!%20I%20would%20like%20to%20discuss%20SEO%20strategy%20for%20my%20website."
+                  href="https://wa.me/9779804354377?text=Namaste%20Nisha!%20I%20would%20like%20to%20discuss%20SEO%20strategy%20for%20my%20website."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill-secondary group flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4 text-pink-500 group-hover:scale-110 transition-transform" />
-                  <span>WhatsApp (+977 980-0000000)</span>
+                  <span>WhatsApp (+977 9804354377)</span>
                 </a>
               </div>
 
@@ -1017,13 +1017,13 @@ export const HomePage: React.FC<HomePageProps> = ({
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <a
-              href="https://wa.me/9779800000000?text=Namaste%20Nisha!%20I%20would%20like%20to%20discuss%20SEO%20for%20my%20website."
+              href="https://wa.me/9779804354377?text=Namaste%20Nisha!%20I%20would%20like%20to%20discuss%20SEO%20for%20my%20website."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill-secondary w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-4 h-4 text-pink-500" />
-              <span>Direct WhatsApp (+977 980-0000000)</span>
+              <span>Direct WhatsApp (+977 9804354377)</span>
             </a>
           </div>
 

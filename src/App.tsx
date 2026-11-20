@@ -113,7 +113,7 @@ export function App() {
             'name': 'Nisha Poudel'
           },
           'url': 'https://seoexpertitahari.com',
-          'telephone': '+977-980-0000000',
+          'telephone': '+977-9804354377',
           'priceRange': '$$',
           'address': {
             '@type': 'PostalAddress',
@@ -181,7 +181,7 @@ export function App() {
         'provider': {
           '@type': 'ProfessionalService',
           'name': 'SEO Expert Itahari',
-          'telephone': '+977-980-0000000',
+          'telephone': '+977-9804354377',
           'address': {
             '@type': 'PostalAddress',
             'addressLocality': 'Itahari',
@@ -274,7 +274,7 @@ export function App() {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
       'name': 'Contact Nisha Poudel - SEO Expert Itahari',
-      'telephone': '+977-980-0000000',
+      'telephone': '+977-9804354377',
       'email': 'consult@seoexpertitahari.com'
     };
     pageContent = <ContactPage onNavigate={navigate} />;

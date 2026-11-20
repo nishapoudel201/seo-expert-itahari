@@ -179,6 +179,12 @@ export const Footer: React.FC<FooterProps> = ({
                 <span>Ward 4, Itahari Sub-Metropolitan, Sunsari, NP</span>
               </div>
               <div className="flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5 text-pink-500 shrink-0" />
+                <a href="tel:+9779804354377" className="hover:text-pink-600">
+                  +977 9804354377
+                </a>
+              </div>
+              <div className="flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-pink-500 shrink-0" />
                 <a href="mailto:consult@seoexpertitahari.com" className="hover:text-pink-600">
                   consult@seoexpertitahari.com

@@ -337,7 +337,7 @@ export const ServicePage: React.FC<ServicePageProps> = ({
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <a
-                href={`https://wa.me/9779800000000?text=Namaste!%20I%20am%20interested%20in%20${encodeURIComponent(service.title)}.`}
+                href={`https://wa.me/9779804354377?text=Namaste!%20I%20am%20interested%20in%20${encodeURIComponent(service.title)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-3 px-6 rounded-full bg-pink-700/60 hover:bg-pink-700 text-white border border-pink-400 font-semibold text-xs transition-colors inline-flex items-center gap-2 shadow-xs"
