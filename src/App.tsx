@@ -32,17 +32,13 @@ export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
     return window.location.pathname || '/';
   });
-  const [isLoading, setIsLoading] = useState<boolean>(() => {
-    // Check if previously loaded in this session to avoid annoying repeat on back/forward
-    return !sessionStorage.getItem('seo_expert_loaded');
-  });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedClusterParam, setSelectedClusterParam] = useState<string | undefined>(undefined);
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [isSchemaOpen, setIsSchemaOpen] = useState(false);
   const [consultationServiceSlug, setConsultationServiceSlug] = useState<string | undefined>(undefined);
 
   const handleLoadingComplete = () => {
-    sessionStorage.setItem('seo_expert_loaded', 'true');
     setIsLoading(false);
   };
 
