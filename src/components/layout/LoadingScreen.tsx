@@ -10,23 +10,20 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isPopped, setIsPopped] = useState(false);
 
   useEffect(() => {
-    // Stage 1: Trigger the lively butterfly pop-up immediately on mount
-    const popTimer = setTimeout(() => {
-      setIsPopped(true);
-    }, 40);
+    // Stage 1: Trigger the lively butterfly pop immediately
+    setIsPopped(true);
 
-    // Stage 2: Quick theatrical sequence (~1.1s total, then quick curtain lift)
+    // Stage 2: Display the popped butterfly for 1 full second (1000ms) before opening
     const exitTimer = setTimeout(() => {
       setIsExiting(true);
-    }, 1100);
+    }, 1000);
 
-    // Stage 3: Complete transition and reveal website smoothly
+    // Stage 3: Smooth curtain finish and reveal website
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 1550);
+    }, 1350);
 
     return () => {
-      clearTimeout(popTimer);
       clearTimeout(exitTimer);
       clearTimeout(completeTimer);
     };
@@ -35,24 +32,24 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const handleSkip = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     setIsExiting(true);
-    setTimeout(onComplete, 250);
+    setTimeout(onComplete, 180);
   };
 
   return (
     <div
       onClick={() => handleSkip()}
-      className={`fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-[#fffafc] text-slate-900 select-none cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+      className={`fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-[#fffafc] text-slate-900 select-none cursor-pointer transition-all duration-400 ease-[cubic-bezier(0.76,0,0.24,1)] ${
         isExiting ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
       }`}
       title="Click anywhere to open instantly"
     >
       {/* Soft Ambient Baby Pink Glowing Halo */}
       <div
-        className={`absolute w-[360px] h-[360px] sm:w-[540px] sm:h-[540px] rounded-full pointer-events-none transition-all duration-700 ease-out ${
-          isPopped ? 'scale-100 opacity-60' : 'scale-50 opacity-0'
+        className={`absolute w-[380px] h-[380px] sm:w-[560px] sm:h-[560px] rounded-full pointer-events-none transition-all duration-500 ease-out ${
+          isPopped ? 'scale-100 opacity-70' : 'scale-50 opacity-0'
         }`}
         style={{
-          background: 'radial-gradient(circle, rgba(244, 114, 182, 0.45) 0%, rgba(253, 232, 239, 0.6) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(244, 114, 182, 0.45) 0%, rgba(253, 232, 239, 0.6) 45%, transparent 70%)',
           filter: 'blur(45px)',
         }}
       />
@@ -60,23 +57,23 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       {/* Radiant Ripple Waves Expanding from Butterfly Center */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <div
-          className={`w-32 h-32 rounded-full border border-pink-300/60 transition-all duration-1000 ease-out ${
-            isPopped ? 'scale-[3.2] opacity-0' : 'scale-75 opacity-80'
+          className={`w-36 h-36 rounded-full border-2 border-pink-300/70 transition-all duration-1000 ease-out ${
+            isPopped ? 'scale-[3.5] opacity-0' : 'scale-50 opacity-90'
           }`}
         />
         <div
-          className={`w-24 h-24 rounded-full border border-pink-400/40 transition-all duration-1000 delay-150 ease-out ${
-            isPopped ? 'scale-[4] opacity-0' : 'scale-50 opacity-90'
+          className={`w-24 h-24 rounded-full border border-pink-400/50 transition-all duration-1000 delay-100 ease-out ${
+            isPopped ? 'scale-[4.2] opacity-0' : 'scale-50 opacity-90'
           }`}
         />
       </div>
 
       {/* Floating Sparkle Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <span className="absolute top-[28%] left-[26%] sm:left-[35%] text-pink-400 text-lg animate-pulse duration-700">✦</span>
-        <span className="absolute top-[32%] right-[24%] sm:right-[34%] text-rose-300 text-sm animate-ping duration-1000">✦</span>
-        <span className="absolute bottom-[34%] left-[28%] sm:left-[36%] text-pink-300 text-xs animate-bounce duration-1000">✦</span>
-        <span className="absolute bottom-[36%] right-[26%] sm:right-[36%] text-pink-400 text-sm animate-pulse duration-500">✦</span>
+        <span className="absolute top-[26%] left-[24%] sm:left-[34%] text-pink-400 text-xl animate-pulse duration-500">✦</span>
+        <span className="absolute top-[30%] right-[22%] sm:right-[33%] text-rose-300 text-sm animate-ping duration-700">✦</span>
+        <span className="absolute bottom-[32%] left-[26%] sm:left-[35%] text-pink-300 text-xs animate-bounce duration-700">✦</span>
+        <span className="absolute bottom-[34%] right-[24%] sm:right-[35%] text-pink-400 text-base animate-pulse duration-500">✦</span>
       </div>
 
       {/* Main Content: Butterfly + Luxury Brand Typography */}
@@ -84,8 +81,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         
         {/* Avatar Capsule Pill with Baby Pink Ring */}
         <div
-          className={`mb-5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-pink-200 shadow-[0_4px_20px_rgba(244,114,182,0.25)] transition-all duration-500 ${
-            isPopped ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-90'
+          className={`mb-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-pink-200 shadow-[0_4px_20px_rgba(244,114,182,0.25)] transition-all duration-300 ${
+            isPopped ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-3 opacity-0 scale-90'
           }`}
         >
           <div className="w-7 h-7 rounded-full overflow-hidden ring-2 ring-pink-400/80 shadow-xs">
@@ -101,27 +98,27 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <span className="w-1.5 h-1.5 rounded-full bg-pink-500 animate-ping" />
         </div>
 
-        {/* 3D Fluttering Butterfly Mascot */}
+        {/* 3D Fluttering Butterfly Mascot with Energetic 1-Second Pop Animation */}
         <div
-          className={`relative transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
-            isPopped ? 'scale-100 opacity-100 translate-y-0' : 'scale-0 opacity-0 translate-y-6'
-          } ${isExiting ? '-translate-y-16 scale-110 opacity-0' : ''}`}
+          className={`relative select-none ${
+            isPopped ? 'animate-[butterflyPop_0.32s_cubic-bezier(0.34,1.56,0.64,1)_forwards]' : 'scale-0 opacity-0'
+          } ${isExiting ? 'transition-all duration-350 -translate-y-16 scale-110 opacity-0 ease-in' : ''}`}
         >
           {/* Subtle Glow behind the wings */}
-          <div className="absolute inset-0 bg-pink-400/20 blur-xl rounded-full scale-125 pointer-events-none" />
+          <div className="absolute inset-0 bg-pink-400/25 blur-xl rounded-full scale-125 pointer-events-none" />
 
           {/* Butterfly Body and Wings Structure with 3D Perspective */}
-          <div className="relative w-44 h-36 flex items-center justify-center [perspective:1000px] select-none">
+          <div className="relative w-48 sm:w-56 h-38 sm:h-44 flex items-center justify-center [perspective:1000px]">
             
             {/* Left Wings Group */}
             <div 
-              className="absolute right-1/2 top-0 w-24 h-36 origin-right transition-transform"
+              className="absolute right-1/2 top-0 w-26 sm:w-30 h-38 sm:h-44 origin-right transition-transform"
               style={{
-                animation: 'butterflyFlapLeft 0.28s ease-in-out infinite alternate',
+                animation: 'butterflyFlapLeft 0.24s ease-in-out infinite alternate',
                 transformStyle: 'preserve-3d',
               }}
             >
-              <svg viewBox="0 0 100 140" className="w-full h-full drop-shadow-[0_8px_16px_rgba(244,114,182,0.4)]">
+              <svg viewBox="0 0 100 140" className="w-full h-full drop-shadow-[0_8px_18px_rgba(244,114,182,0.45)]">
                 <defs>
                   <linearGradient id="leftForewingGrad" x1="100%" y1="50%" x2="0%" y2="0%">
                     <stop offset="0%" stopColor="#ec4899" stopOpacity="0.95" />
@@ -151,7 +148,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                   stroke="#ffffff"
                   strokeWidth="1.2"
                   strokeLinecap="round"
-                  opacity="0.75"
+                  opacity="0.8"
                 />
 
                 {/* Forewing Accent Edge Glow Dots */}
@@ -174,24 +171,24 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                   stroke="#ffffff"
                   strokeWidth="1.1"
                   strokeLinecap="round"
-                  opacity="0.7"
+                  opacity="0.75"
                 />
 
                 {/* Hindwing Accent Spot */}
-                <circle cx="48" cy="116" r="3" fill="#f43f5e" opacity="0.6" />
+                <circle cx="48" cy="116" r="3" fill="#f43f5e" opacity="0.65" />
                 <circle cx="48" cy="116" r="1.5" fill="#ffffff" opacity="0.95" />
               </svg>
             </div>
 
             {/* Right Wings Group (Symmetrical Mirror) */}
             <div 
-              className="absolute left-1/2 top-0 w-24 h-36 origin-left transition-transform"
+              className="absolute left-1/2 top-0 w-26 sm:w-30 h-38 sm:h-44 origin-left transition-transform"
               style={{
-                animation: 'butterflyFlapRight 0.28s ease-in-out infinite alternate',
+                animation: 'butterflyFlapRight 0.24s ease-in-out infinite alternate',
                 transformStyle: 'preserve-3d',
               }}
             >
-              <svg viewBox="0 0 100 140" className="w-full h-full drop-shadow-[0_8px_16px_rgba(244,114,182,0.4)]">
+              <svg viewBox="0 0 100 140" className="w-full h-full drop-shadow-[0_8px_18px_rgba(244,114,182,0.45)]">
                 <defs>
                   <linearGradient id="rightForewingGrad" x1="0%" y1="50%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#ec4899" stopOpacity="0.95" />
@@ -221,7 +218,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                   stroke="#ffffff"
                   strokeWidth="1.2"
                   strokeLinecap="round"
-                  opacity="0.75"
+                  opacity="0.8"
                 />
 
                 {/* Forewing Accent Edge Glow Dots */}
@@ -244,18 +241,18 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                   stroke="#ffffff"
                   strokeWidth="1.1"
                   strokeLinecap="round"
-                  opacity="0.7"
+                  opacity="0.75"
                 />
 
                 {/* Hindwing Accent Spot */}
-                <circle cx="52" cy="116" r="3" fill="#f43f5e" opacity="0.6" />
+                <circle cx="52" cy="116" r="3" fill="#f43f5e" opacity="0.65" />
                 <circle cx="52" cy="116" r="1.5" fill="#ffffff" opacity="0.95" />
               </svg>
             </div>
 
             {/* Butterfly Center Body & Delicate Antennae */}
             <div className="absolute z-20 pointer-events-none flex flex-col items-center">
-              <svg viewBox="0 0 36 120" className="w-9 h-28 drop-shadow-sm overflow-visible">
+              <svg viewBox="0 0 36 120" className="w-10 h-30 drop-shadow-sm overflow-visible">
                 {/* Antennae */}
                 <path
                   d="M16 38 C14 26 8 16 2 12"
@@ -289,7 +286,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                 />
 
                 {/* Luminous Pearl Chest Accent */}
-                <circle cx="18" cy="51" r="2" fill="#ffffff" className="animate-pulse" />
+                <circle cx="18" cy="51" r="2.2" fill="#ffffff" className="animate-pulse" />
               </svg>
             </div>
 
@@ -298,8 +295,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
         {/* Elegant Brand Headline & Subtitle */}
         <div
-          className={`mt-6 space-y-2 transition-all duration-500 delay-100 ${
-            isPopped ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+          className={`mt-5 space-y-1.5 transition-all duration-300 delay-75 ${
+            isPopped ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
           }`}
         >
           <div className="flex items-center justify-center gap-2">
@@ -311,7 +308,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           </div>
 
           <div className="flex items-center justify-center gap-1.5 text-xs font-mono font-medium text-pink-600 tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '6s' }} />
+            <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '4s' }} />
             <span>Architecting Search Authority</span>
             <span>•</span>
             <span>Nepal</span>
@@ -320,20 +317,20 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
         {/* Quick Pop Progress Line (Fast Shimmer, No Numbers) */}
         <div
-          className={`mt-5 w-48 sm:w-64 h-[3px] bg-pink-100 rounded-full overflow-hidden relative transition-all duration-500 delay-200 ${
+          className={`mt-4 w-48 sm:w-64 h-[3px] bg-pink-100 rounded-full overflow-hidden relative transition-all duration-300 delay-150 ${
             isPopped ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
           }`}
         >
           <div
-            className="h-full bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 rounded-full animate-[shimmerSlide_1s_ease-in-out_infinite]"
+            className="h-full bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 rounded-full animate-[shimmerSlide_0.8s_ease-in-out_infinite]"
             style={{ width: '100%' }}
           />
         </div>
 
-        {/* Quick Skip Pill */}
+        {/* Quick Skip Hint */}
         <button
           onClick={handleSkip}
-          className={`mt-5 text-[11px] font-mono tracking-widest uppercase text-slate-400 hover:text-pink-600 transition-colors cursor-pointer py-1 px-3 rounded-full hover:bg-pink-50 ${
+          className={`mt-4 text-[11px] font-mono tracking-widest uppercase text-slate-400 hover:text-pink-600 transition-colors cursor-pointer py-1 px-3 rounded-full hover:bg-pink-50 ${
             isPopped ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -341,17 +338,35 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         </button>
       </div>
 
-      {/* Global CSS for 3D Butterfly Flap & Shimmer Animations */}
+      {/* Global CSS for 3D Butterfly Pop, Flap & Shimmer Animations */}
       <style>{`
+        @keyframes butterflyPop {
+          0% {
+            transform: scale(0.15) translateY(24px);
+            opacity: 0;
+          }
+          65% {
+            transform: scale(1.15) translateY(-6px);
+            opacity: 1;
+          }
+          85% {
+            transform: scale(0.96) translateY(2px);
+          }
+          100% {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+          }
+        }
+
         @keyframes butterflyFlapLeft {
           0% {
             transform: rotateY(0deg) skewY(0deg);
           }
           50% {
-            transform: rotateY(65deg) skewY(-6deg) scaleX(0.9);
+            transform: rotateY(68deg) skewY(-6deg) scaleX(0.88);
           }
           100% {
-            transform: rotateY(10deg) skewY(2deg);
+            transform: rotateY(12deg) skewY(2deg);
           }
         }
 
@@ -360,10 +375,10 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             transform: rotateY(0deg) skewY(0deg);
           }
           50% {
-            transform: rotateY(-65deg) skewY(6deg) scaleX(0.9);
+            transform: rotateY(-68deg) skewY(6deg) scaleX(0.88);
           }
           100% {
-            transform: rotateY(-10deg) skewY(-2deg);
+            transform: rotateY(-12deg) skewY(-2deg);
           }
         }
 
