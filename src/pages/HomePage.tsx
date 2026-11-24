@@ -32,11 +32,7 @@ import { caseStudiesData } from '../data/caseStudiesData';
 import { testimonialsData, testimonialEthicsPolicy } from '../data/testimonialsData';
 import { categorizedFaqData } from '../data/faqData';
 import { TopicalMapVisualizer } from '../components/common/TopicalMapVisualizer';
-import { SeoHealthGrader } from '../components/common/SeoHealthGrader';
-import { RoiCalculator } from '../components/common/RoiCalculator';
-import { TerminalCrawlSimulator } from '../components/common/TerminalCrawlSimulator';
 import { BeforeAfterComparison } from '../components/common/BeforeAfterComparison';
-import { VideoAuditAnimation } from '../components/common/VideoAuditAnimation';
 
 // Creative Components in White & Baby Pink
 import { SpotlightCard } from '../components/common/SpotlightCard';
@@ -56,13 +52,6 @@ export const HomePage: React.FC<HomePageProps> = ({
   onOpenSchema
 }) => {
   const [heroDomain, setHeroDomain] = useState('');
-
-  const scrollToVideo = () => {
-    const el = document.getElementById('screencast-walkthrough');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -196,16 +185,13 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </a>
               </div>
 
-              <div className="pt-1 flex items-center gap-4 text-xs font-mono text-slate-500">
-                <button
-                  onClick={scrollToVideo}
-                  className="inline-flex items-center gap-1.5 text-pink-600 hover:text-pink-700 font-semibold cursor-pointer underline underline-offset-4 decoration-pink-300"
-                >
-                  <Play className="w-3.5 h-3.5 fill-pink-500 text-pink-500" />
-                  <span>Watch Recorded Audit Walkthrough (0:40)</span>
-                </button>
+              <div className="pt-1 flex items-center gap-3 text-xs font-mono text-slate-500">
+                <span className="flex items-center gap-1.5 text-emerald-600 font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  Direct Human Reply in 24h
+                </span>
                 <span>•</span>
-                <span>Direct Human Reply in 24h</span>
+                <span>100% Confidential Client Advisory</span>
               </div>
             </div>
 
@@ -687,64 +673,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 7: INTERACTIVE WORKSTATION & CRAWLER SIMULATOR */}
-      {/* ======================================================== */}
-      <section className="py-16 sm:py-24 border-b border-pink-100 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold bg-pink-50 text-pink-700 border border-pink-200 mb-2">
-              INTERACTIVE LABORATORY
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-              Test Real-Time Crawl Dynamics & Economic Yield
-            </h2>
-            <p className="text-sm text-slate-600 mt-1">
-              Simulate Googlebot user-agents, calculate your organic pipeline revenue, and run live diagnostic scans.
-            </p>
-          </div>
-
-          {/* Interactive Live Terminal Simulator */}
-          <TerminalCrawlSimulator />
-
-          {/* Interactive ROI Calculator */}
-          <RoiCalculator onOpenConsultation={onOpenConsultation} />
-
-          {/* Interactive SEO Health Grader */}
-          <SeoHealthGrader onOpenConsultation={onOpenConsultation} />
-
-        </div>
-      </section>
-
-      {/* ======================================================== */}
-      {/* SECTION 8: VIDEO AUDIT SCREENCAST */}
-      {/* ======================================================== */}
-      <section id="screencast-walkthrough" className="py-16 sm:py-24 border-b border-pink-100 bg-[#fff5f8] text-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-pink-100 text-pink-700 border border-pink-200">
-                TECHNICAL SCREENCAST • 40-SECOND DEMO
-              </span>
-              <span className="text-xs font-mono text-slate-500 hidden sm:inline">
-                ● 5 Real Audit Phases
-              </span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading">
-              Watch How a Technical SEO Audit Operates in Real-Time
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
-              Step inside a recorded audit walkthrough: watch us inspect raw DOM bottlenecks, inject verified JSON-LD graphs, climb from #23 to #1 on Google Maps in Sunsari, and accelerate Core Web Vitals to 98/100.
-            </p>
-          </div>
-
-          {/* Interactive Screencast Video Player */}
-          <VideoAuditAnimation />
-        </div>
-      </section>
-
-      {/* ======================================================== */}
-      {/* SECTION 9: VERIFIED CASE OUTCOMES & RADAR MAP ARTIFACTS */}
+      {/* SECTION 7: VERIFIED CASE OUTCOMES & RADAR MAP ARTIFACTS */}
       {/* ======================================================== */}
       <section className="py-16 sm:py-24 border-b border-pink-100 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -840,7 +769,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 10: 6-STEP IMPLEMENTATION ROADMAP */}
+      {/* SECTION 8: 6-STEP IMPLEMENTATION ROADMAP */}
       {/* ======================================================== */}
       <section className="py-16 sm:py-24 border-b border-pink-100 bg-[#fffafc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -878,7 +807,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 11: TOPICAL MAP INTERACTIVE VISUALIZER */}
+      {/* SECTION 9: TOPICAL MAP INTERACTIVE VISUALIZER */}
       {/* ======================================================== */}
       <section className="py-12 bg-white border-b border-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -887,7 +816,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 12: ETHICS & VERIFIED FEEDBACK */}
+      {/* SECTION 10: ETHICS & VERIFIED FEEDBACK */}
       {/* ======================================================== */}
       <section className="py-16 sm:py-20 border-b border-pink-100 bg-[#fffafc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -937,7 +866,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 13: FAQS ACCORDION */}
+      {/* SECTION 11: FAQS ACCORDION */}
       {/* ======================================================== */}
       <section className="py-16 sm:py-20 border-b border-pink-100 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -983,7 +912,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ======================================================== */}
-      {/* SECTION 14: FINAL CONVERSION CTA (WHITE & BABY PINK GLOW) */}
+      {/* SECTION 12: FINAL CONVERSION CTA (WHITE & BABY PINK GLOW) */}
       {/* ======================================================== */}
       <section className="py-20 sm:py-28 bg-gradient-to-b from-[#fff5f8] to-[#fce7f3] text-slate-900 relative overflow-hidden border-t border-pink-200">
         {/* Glow backdrop */}
